@@ -54,7 +54,7 @@ export function DefaultLabel({
   if (displayLabel) {
     return (
       <span>
-        <Label key={0} label={label} required={required} id={id} />,
+        <Label key={0} label={label} required={required} id={id} />
         {description ?
           <DescriptionField
             key={1}
