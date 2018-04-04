@@ -52,19 +52,18 @@ export function DefaultLabel({
   const { DescriptionField = DefaultDescriptionField } = fields;
 
   if (displayLabel) {
-    return [
-      <Label key={0} label={label} required={required} id={id} />,
-      description ? (
-        <DescriptionField
-          key={1}
-          id={id + "__description"}
-          description={description}
-          formContext={formContext}
-        />
-      ) : (
-        undefined
-      ),
-    ];
+    return (
+      <span>
+        <Label key={0} label={label} required={required} id={id} />,
+        {description ?
+          <DescriptionField
+            key={1}
+            id={id + "__description"}
+            description={description}
+            formContext={formContext}
+          /> : undefined}
+      </span>
+    );
   }
 
   return null;
